@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RKTOURS - Contact Us</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <section class="colored-section" id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo4.png" alt="RKTOURS Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer1">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="toggleButton" class="btn btn-dark-mode" onclick="toggleDarkMode()">Dark Mode</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="header">
+                    <h1 class="big-heading">About Us</h1>
+                </div>
+
+                <div class="content">
+                    <h2>Welcome to RKTOURS</h2>
+                    <p>RKTOURS is a leading travel agency specializing in organizing memorable and enjoyable tours around the world.</p>
+                    <p>With a team of experienced professionals and a passion for travel, we strive to provide our clients with exceptional travel experiences that cater to their unique interests and preferences.</p>
+                    <p>Whether you're looking for an adventurous hiking trip, a relaxing beach vacation, or a cultural exploration, RKTOURS has a wide range of tour packages to suit every traveler's needs.</p>
+                    <p>Our mission is to make your travel dreams come true by offering personalized itineraries, top-notch customer service, and a commitment to quality and satisfaction.</p>
+                    <p>Contact us today to start planning your next unforgettable adventure with RKTOURS!</p>
+                </div>
+                
+                <div class="content">
+                    <h2>Contact Us</h2>
+                    <p>You can reach out to us using the following contact details:</p>
+                </div>
+                
+                <!-- Table -->
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Address:</strong></td>
+                            <td> Hamra, Beirut, Lebanon</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email:</strong></td>
+                            <td>mh@rktours.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phone:</strong></td>
+                            <td>+1 133-456-7890</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Working Hours:</strong></td>
+                            <td>
+                                Monday-Friday: 9am-5pm<br>
+                                Saturday: 10am-3pm<br>
+                                Sunday: Closed
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="footer" id="footer1">
+                    <p>&copy; 2023 RKTOURS. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.querySelector('body');
+            var navbar = document.querySelector('.navbar');
+            var toggleButton = document.querySelector('#toggleButton');
+
+            body.classList.toggle('dark-mode');
+            navbar.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                // Switching to dark mode
+                body.classList.remove('light-mode');
+                navbar.classList.remove('light-mode');
+                toggleButton.textContent = 'Light Mode';
+                toggleButton.classList.remove('btn-dark-mode');
+                toggleButton.classList.add('btn-light-mode');
+            } else {
+                // Switching to light mode
+                body.classList.remove('dark-mode');
+                navbar.classList.remove('dark-mode');
+                toggleButton.textContent = 'Dark Mode';
+                toggleButton.classList.remove('btn-light-mode');
+                toggleButton.classList.add('btn-dark-mode');
+            }
+        }
+    </script>
+</body>
+
+</html>
